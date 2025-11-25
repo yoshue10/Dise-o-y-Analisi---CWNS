@@ -151,3 +151,138 @@ body{
 .contact-button button:hover i{
     transform: scale(1.1);
 }
+
+.header-2{
+    padding: 15px 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-categories{
+    list-style: none;
+    display: flex;  
+    gap: 45px;
+    padding: 10px;     
+    margin: 0;
+}
+
+.nav-categories li a{
+    display: block;  
+    background-color: #fff;
+    border-radius: 40px;
+    padding: 8px 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-2 .nav-categories li:hover{
+    transform: scale(1.1);
+}
+
+.header-2 .nav-categories a{
+    font-size: 400;
+    text-decoration: none;
+    color: #000;   
+}
+
+.nav-categories a:hover{
+    color: #FF7052; 
+}
+
+.menu-container {
+    display: flex;
+    align-items: flex-start; 
+    width: 90%;
+    max-width: 1000px;
+    margin: 50px auto;
+    font-size: 24px;
+}
+
+.menu-lateral {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 30px; 
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+    width: 200px; 
+}
+
+.menu-item {
+    padding: 15px 25px;
+    cursor: pointer;
+    font-size: 24px;
+    color: #333; /* Color texto inactivo */
+    transition: all 0.3s ease;
+    
+    /* Por defecto, bordes redondeados a la izquierda */
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    /* Lado derecho recto para que conecte visualmente */
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.menu-item:hover:not(.active) {
+    background-color: #d9d9d9 /* Transparencia blanca */
+    /* O si prefieres gris explícito: background-color: #e0e0e0; */
+}
+
+.menu-item.active {
+    background-color: #fff; /* Blanco igual que el slider */
+    color: #000;
+      
+    /* Sombra sutil para dar profundidad */
+    box-shadow: -5px 0 10px rgba(0,0,0,0.05);
+    
+    /* Empujar ligeramente a la derecha para tapar el borde si lo hubiera */
+    position: relative;
+    z-index: 2;
+    width: 100%; /* Asegura que llegue al borde */
+}
+
+.slider-box {
+    display: flex;
+    background-color: #fff;
+    height: 400px; /* Altura fija o min-height */
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1;
+    
+    /* Bordes redondeados */
+    border-radius: 20px;
+    /* Sombra para todo el bloque */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    
+    /* Importante: para que el menú parezca estar detrás/conectado */
+    position: relative;
+    z-index: 1;
+    padding: 0 20px;
+}
+
+.slider-content {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Por si la imagen es muy grande */
+}
+
+.arrow-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none; 
+    transition: background 0.2s;
+    border-radius: 50%;
+}
+
+.arrow-btn:hover {
+    background-color: #e9e8e8;
+}
+
+.arrow-btn i {
+    font-size: 30px;
+    color: #333;
+}
+
